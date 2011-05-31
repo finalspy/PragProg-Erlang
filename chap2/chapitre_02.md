@@ -111,6 +111,11 @@ Les atoms sont alors constitués d'une suite de caractères alphanumériques ain
 
 ## Tuples
 
+Les "tuples" servent à regrouper dans éléments en une seule entité.
+Un tuple se compose d'accolades entourant des éléments séparés par des virgules.
+
+
+
 ## Listes
 
 ## Strings
