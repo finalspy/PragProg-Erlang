@@ -111,6 +111,57 @@ Les atoms sont alors constitués d'une suite de caractères alphanumériques ain
 
 ## Tuples
 
+### Définition 
+
+Un "tuple" est un regroupement d'éléments en une seule entité.
+Un "tuple" est assez similaire à un "struct" C, à la différence qu'un "tuple est anonyme.
+
+### Notation
+
+Un "tuple" se note avec des accolades pour encadrer ses éléments et des virgules pour les séparer.
+
+### Exemples
+
+L'exemple ci-dessous est un tuple {yann,33} représentant mon prénom et mon age.
+Formé d'un "atom" : yann.
+Et d'un nombre : 33.
+Et l'on peut l'affecter a une variable : Moi.
+
+	1> {yann,33}.
+	{yann,33}
+	2> Moi = {yann,33}.
+	{yann,33}
+	3> Moi.
+	{yann,33}
+
+Il est possible de combiner des tuples pour arriver a des structures plus complexes.
+
+	4> Famille = {{pere,Moi},{mere,{carine,31}},{fils,{evan,6}}}.
+	{{pere,{yann,33}},{mere,{carine,31}},{fils,{evan,6}}}
+
+### Extraction
+
+Les "tuples" ça a l'air sympa... mais comment les exploiter ?
+Comment récupérer les valeurs ?
+
+Et bien il faut utiliser l'opérateur =, puisqu'on a déjà dit qu'il agit comme un opérateur de pattern matching et que Erlang tenterait de rendre un égalité vrai.
+
+Ainsi dans les exempls ci-dessous nous affectons a des variables les valeurs des éléments des tuples :
+
+	5> {Papa,Maman,Enfant} = Famille.
+	{{pere,{yann,33}},{mere,{carine,31}},{fils,{evan,6}}}
+	6> Maman.
+	{mere,{carine,31}}
+	7> Enfant.
+	{fils,{evan,6}}
+	8> {_,{Prenom,Age}} = Enfant.
+	{fils,{evan,6}}
+	9> Age.
+	6
+	10> Prenom.
+	evan
+
+
 ## Listes
 
 ## Strings
