@@ -146,7 +146,7 @@ Comment récupérer les valeurs ?
 
 Et bien il faut utiliser l'opérateur =, puisqu'on a déjà dit qu'il agit comme un opérateur de pattern matching et que Erlang tenterait de rendre un égalité vrai.
 
-Ainsi dans les exempls ci-dessous nous affectons a des variables les valeurs des éléments des tuples :
+Ainsi dans les exemples ci-dessous nous affectons a des variables les valeurs des éléments des tuples :
 
 	5> {Papa,Maman,Enfant} = Famille.
 	{{pere,{yann,33}},{mere,{carine,31}},{fils,{evan,6}}}
@@ -161,8 +161,19 @@ Ainsi dans les exempls ci-dessous nous affectons a des variables les valeurs des
 	10> Prenom.
 	evan
 
+A noter sur la ligne 8, l'utilisation du caractère _ qui est la pour signaler une valeur qui ne nous intéresse pas et que l'on ne désire pas extraire dans une variable.
 
 ## Listes
+
+### Définition
+
+Les listes en Erlang ne sont pas différentes des listes dans d'autres languages de programmation.
+
+### Notation
+
+Les listes sont représentées par des crochets, entourant des valeurs séparées par des virgules.
+
+
 
 ## Strings
 
